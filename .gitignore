@@ -1,4 +1,4 @@
 # YAML database credential files
-db_creds_raw
-db_creds_cleaned
+db_creds_raw.yaml
+db_creds_cleaned.yaml
 __pycache__/*
