@@ -1,5 +1,0 @@
-HOST: localhost
-PORT: 5432
-DATABASE: sales_data_cleaned
-USER: postgres
-PASSWORD: Sherherazade8
