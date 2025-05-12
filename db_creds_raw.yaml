@@ -1,0 +1,5 @@
+HOST: localhost
+PORT: 5432
+DATABASE: sales_data_raw
+USER: postgres
+PASSWORD: Sherherazade8
