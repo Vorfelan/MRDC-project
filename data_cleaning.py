@@ -47,8 +47,8 @@ class DataCleaning:
         df.replace("NULL", np.nan, inplace=True)
         df.dropna(inplace=True)
         df.drop_duplicates(subset=['card_number'], inplace=True)
-        df['card_number'] = pd.to_numeric(df['card_number'], errors='coerce')
-        df.dropna(subset=['card_number'])
+        df = df[df['card_number'].astype(str).str.isdigit()]
+        df['card_number_id'] = df['card_number'].astype(str).str[0:10]  # Deals with problem where many entries in orders table have replaced final digits with 0's
 
         date_cols = ['date_payment_confirmed', 'expiry_date']
 
@@ -172,6 +172,10 @@ class DataCleaning:
         redundant_cols = ['level_0', 'Unnamed: 0', 'first_name', 'last_name', '1']
         df = df.drop(columns=[col for col in redundant_cols if col in df.columns])
 
+        df.drop_duplicates(subset=['card_number'], inplace=True)
+        df = df[df['card_number'].astype(str).str.isdigit()]
+        df['card_number_id'] = df['card_number'].astype(str).str[0:10] # Deals with problem where many entries in orders table have replaced final digits with 0's
+
         return df
 
     def clean_dates_details(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -193,6 +197,3 @@ class DataCleaning:
             df[col] = pd.to_numeric(df[col], errors='coerce').astype('Int64')
 
         return df
-
-
-    

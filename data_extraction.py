@@ -52,16 +52,4 @@ class DataExtractor:
         if file_ext == 'json':
             df = pd.read_json(f'{new_file_name}.json')
         return df
-    
-    #def extract_from_http_url(self, url_path: str, new_file_name: str) -> pd.DataFrame:
-    #    '''
-    #    Downloads data from a public HTTP URL specifed by url_path and returns as DataFrame.
-    #    
-    #    Args:
-    #        url_path (str): public HTTP URL path.
-    #        new_file_name (str): name fpr new file downloaded (without extension).
-    #        
-    #    Returns:
-    #        pd.DataFrame: A pandas DataFrame containing downloaded data.
-    #    '''
-    
+        
