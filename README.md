@@ -1,4 +1,4 @@
-# AiCore-Multinational-Retail-Data-Centralisation-project
+# Multinational Retail Data Centralisation project
 
 ## Overview
 
@@ -16,28 +16,29 @@ Second, the file 'data_queries.ipynb' inspects the clean SQL database, returning
 
 ## File structure
 
-Execution files:
-    - prepare_cleaned_SQL_database.ipynb
-    - data_queries.ipynb
+### Execution files:
+- prepare_cleaned_SQL_database.ipynb
+- data_queries.ipynb
 
-Source code:
-    - database_utils.py
-    - data_extraction.py
-    - data_cleaning.py
+### Source code:
+- database_utils.py
+- data_extraction.py
+- data_cleaning.py
 
-Data files:
-    - date_details.json
-    - product_data.xlsx
+### Data files:
+- date_details.json
+- product_data.xlsx
 
-SQL scripts:
-    - scripts for organising the clean database within SQL_tidy_commands folder
-    - scripts for querying the data within SQL_queries folder
+### SQL scripts:
+- scripts for organising the clean database within SQL_tidy_commands folder
+- scripts for querying the data within SQL_queries folder
 
-Credential files:
-    - within 'credentials' folder but set to .gitignore
+### Credential files:
+- Credentials for acessing SQL databases are within 'credentials' folder but set to .gitignore.
 
-Other:
-    - 'db_relationships.xlsx' contains table of shared columns between tables in clean database, i.e. identifies primary and foreign keys
+### Other:
+- 'db_relationships.xlsx' contains table of shared columns between tables in clean database, i.e. identifies primary and foreign keys.
+
 
 ## Notes
 I think there are still some issues with this code, where more data than necessary might have been removed when forced to solve certain issues, including discrepancies between rows in the orders table foreign keys and corresponding tables. These will have to be addressed later.
